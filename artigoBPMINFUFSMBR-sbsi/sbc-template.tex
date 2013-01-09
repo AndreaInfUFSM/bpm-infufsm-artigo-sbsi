@@ -112,11 +112,25 @@ A modelagem contempla a construção de um fluxo de trabalho seguindo o padrão 
 
 Como também mostra a Figura 1, cada  task  é associada a uma etapa do processo, e cada etapa é constituída  por formulários web, os quais devem ser preenchidos pelo usuário correspondente. Por exemplo: o aluno deve  descrever  a ACG e preencher  suas  informações  de  identificação;  o professor responsável deve avaliar a solicitação e sugerir alterações, se necessário; o relator do colegiado deve fornecer um parecer sobre tal solicitação e, por fim, o colegiado deve aprovar ou não a solicitação de registro.
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.99\textwidth]{images/processo.png}
+\caption{Diagrama da modelagem do processo}
+\label{fig:Fig1}
+\end{figure}
+
 \section{Implementação}
 
 Um dos primeiros passos durante a implementação foi a criação dos formulários a serem visualizados pelos participantes, conforme os papéis que desempenham. No Bonita Studio, a construção de formulários é facilitada, pois existem vários tipos de elementos pré-definidos que como caixa de texto, campo de data ou uma lista, por exemplo. Utilizando dos elementos citados, é possível construir rapidamente um formulário. Porém, no caso prático em questão, foi necessário realizar algumas customizações através de código na linguagem Groovy, para atender alguns requisitos tais como: geração de uma lista com possíveis professores/tutores, auto-preenchimento das informações dos alunos, etc. A figura 2 mostra um exemplo de formulário visualizado pelo aluno, no momento em que este realiza a solicitação de aproveitamento de ACG.
 
 Para que o aluno pudesse enviar os documentos comprobatórios (certificados, atestados, pareceres, etc), utilizou-se um sistema para gestão de conteúdo empresarial, do inglês Enterprise Content Management (ECM), denominado Alfresco (Alfresco, 2012). Essa tecnologia foi escolhida por ser suportada via um conector na plataforma BOS, permitindo assim um gerenciamento facilitado dos documentos mesmo após o término dos processos (o que de fato é necessário, pois tais documentos precisam ser arquivados na instituição). Tal como BOS, Alfresco também é um software livre, desenvolvido em Java e com interface web.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.6\textwidth]{images/formSolicitacao.png}
+\caption{Diagrama da modelagem do processo}
+\label{fig:Fig1}
+\end{figure}
 
 Para a implementação do cadastro e login dos participantes do processo como usuários do sistema, foi utilizada a própria plataforma de execução provida pelo BOS. Como os usuários já se encontravam cadastrados em outros sistemas na instituição, buscou-se uma solução que permitisse utilizar os mesmos nomes e senhas de usuário. Assim, optou-se autenticar usuários através de uma base de dados LDAP, do inglês Lightweight Directory Access Protocol, implementada pelo serviço Linux OpenLDAP. Os demais serviços da subunidade também utilizam essa base de dados, visando centralizar informações e evitar redundância e inconsistência de dados.
 
@@ -127,6 +141,14 @@ Outro ponto importante na implementação do processo foi a necessidade da gera�
 A partir da necessidade de relatórios, portanto, foi preciso definir uma base de dados externa para o armazenamento das informações de solicitação/apreciação de atividades. Iniciou-se definindo a estrutura relacional contendo as seguintes tabelas: acg, avaliacao\_colegiado, avaliacao\_relator, avaliacao\_sec\_coord, avaliacao\_tutor e tipo\_acg. Em seguida, foi escolhido o SGBD Java H2 pela simplicidade e eficiência. Depois disso, foi necessário incluir conectores do SGBD H2 em tasks do processo, com as respectivas consultas SQL, para que a base de dados de atividades ficasse constantemente atualizada, sendo assim uma fonte segura para os relatórios.
 
 Para a implementação dos relatórios, foi necessário construir uma definição XML (contendo as consultas SQL, definições de campos, formatações, etc.)  para cada relatório utilizando a ferramenta gráfica iReport. Mais tarde, essas definições são executadas pela biblioteca JasperReports também provida por Bonita através do conector, contra uma fonte de dados. Para que os usuários tivessem acesso aos relatórios gerados, foram criados mais dois processos chamados “Listar ACGs do usuário” (histórico) e “Resumo ACGs do usuário” (carga-horária). A Figura 3 ilustra esse mecanismo de funcionamento básico de conectores BOS para geração de relatórios com a biblioteca JasperReports.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.5\textwidth]{images/conector.png}
+\caption{Diagrama da modelagem do processo}
+\label{fig:Fig1}
+\end{figure}
+
 
 A última etapa da implementação foi a personalização da interface do sistema, substituindo imagens e cores padrão do ambiente por elementos que remetem à identidade visual da instituição. Esta customização foi realizada alterando-se arquivos HTML e CSS que definem a interface web do BOS. Outras personalizações mais profundas também foram necessárias na interface, para remover componentes julgados desnecessários, que acabavam por confundir os usuários. Porém, estas alterações não poderiam ser feitas apenas editando-se imagens e arquivos. Neste caso, foi necessário a alteração do código do próprio BOS, algo que só foi possível pelo fato de a ferramenta ser distribuída como software livre.
 
