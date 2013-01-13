@@ -3,27 +3,23 @@
 \bibitem[{ABPMP} 2012]{ABPMP}
 {ABPMP} (2012).
 \newblock {\em Guide to the Business Process Management Body of Knowledge (BPM
-  CBOK®)}.
+  CBOK)}.
 \newblock Association of Business Process Management Professionals, 2nd
   edition.
 
-\bibitem[Alfresco 2012]{ALFRESCO}
-Alfresco (2012).
-\newblock Open source enterprise content management system (cms).
-
 \bibitem[Barn and Oussena 2010]{samia2010}
 Barn, B. and Oussena, S. (2010).
-\newblock {\em Information systems development: towards a service provision
-  society}, chapter {BPMN}, toolsets, and methodology: a case study of business
-  process management in higher education, pages 685--693.
-\newblock Springer, Boston, MA.
+\newblock {BPMN}, toolsets, and methodology: a case study of business process
+  management in higher education.
+\newblock In {\em Information systems development: towards a service provision
+  society}, pages 685--693. Springer, Boston, MA.
 
 \bibitem[BonitaSoft 2012]{BONITASOFT}
 BonitaSoft (2012).
 \newblock Bonitasoft open source workflow and bpm software.
 
-\bibitem[{CNE} 2012]{parecer:136}
-{CNE} (2012).
+\bibitem[{Conselho Nacional de Educação} 2012]{parecer:136}
+{Conselho Nacional de Educação} (2012).
 \newblock Parecer cne/ces no: 136/2012. conselho nacional de educação/câmara
   de educação superior. diretrizes curriculares nacionais para os cursos de
   graduação em computação. processo nº 23001.000026/2012-95.
@@ -31,10 +27,6 @@ BonitaSoft (2012).
 \bibitem[INITIATIVE 2013]{BPMN}
 INITIATIVE, B. P.~M. (2013).
 \newblock Business process model and notation (bpmn).
-
-\bibitem[JasperSoft 2013]{JASPERSOFT}
-JasperSoft (2013).
-\newblock Jaspersoft: Intelligence inside.
 
 \bibitem[Jeston and Nelis 2012]{JestonNelis2012}
 Jeston, J. and Nelis, J. (2012).
