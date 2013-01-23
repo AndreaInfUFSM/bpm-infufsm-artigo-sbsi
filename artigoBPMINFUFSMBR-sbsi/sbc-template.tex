@@ -13,7 +13,7 @@
 \sloppy
 
 %\title{Gerenciamento de Processos de Negócio em Cursos de Sistemas de Informação: um Caso Prático\\ Utilizando Software Livre}
-\title{Gerenciamento de Processos de Negócio em Curso de Sistemas de Informação: Relato de Experiência\\ Utilizando Software Livre}
+\title{Gestão de Processos de Negócio em Curso de Sistemas de Informação: Relato de Experiência Utilizando Software Livre}
 %Outra alternativa:
 %Utilizando BPM no Processo de Validação de Atividades Complementares em um Bacharelado em Sistemas de Informação
 
@@ -42,27 +42,27 @@ This article presents a case study of modeling and implementing a business proce
 
 \section{Introdução}
 
-O gerenciamento de processos de negócio, do inglês \emph{Business Process Management} (BPM), é um conceito que une as áreas de administração e tecnologia da informação com o objetivo de melhorar processos nas organizações \cite{weske}. Um processo pode ser entendido como um conjunto de atividades realizadas de forma organizada para atingir um objetivo \cite{ABPMP}. Tais conceitos se alinham com o perfil esperado dos egressos de cursos de bacharelado em Sistemas de Informação, que inclui uma formação \emph{“visando o desenvolvimento e a gestão de soluções baseadas em tecnologia da informação para os processos de negócio das organizações de forma que elas atinjam efetivamente seus objetivos estratégicos de negócio”} \cite{parecer:136}.
+A gestão de processos de negócio, do inglês \emph{Business Process Management} (BPM), é um conceito que une as áreas de administração e tecnologia da informação com o objetivo de melhorar processos nas organizações \cite{weske}. Um processo pode ser entendido como um conjunto de atividades realizadas de forma organizada para atingir um objetivo \cite{ABPMP}. Tais conceitos se alinham com o perfil esperado dos egressos de cursos de bacharelado em Sistemas de Informação, que inclui uma formação \emph{“visando o desenvolvimento e a gestão de soluções baseadas em tecnologia da informação para os processos de negócio das organizações de forma que elas atinjam efetivamente seus objetivos estratégicos de negócio”} \cite{parecer:136}.
 
-Instituições de ensino superior e, mais especificamente, suas subunidades que gerenciam cursos de graduação, são potenciais “clientes” de BPM, pois realizam processos envolvendo diferentes atores (discentes, docentes, secretários, coordenadores, etc.). Tais instituições podem se beneficiar com a adoção de ferramentas de apoio à aplicação de BPM, os chamados sistemas de BPM (\emph{Business Process Management Systems} ou \emph{Suites} - BPMS). Casos e exemplos de gerenciamento de processos de negócio são facilmente encontrados na literatura~\cite{JestonNelis2012}, mas geralmente se enquadram no setor empresarial ou de serviços públicos. Em instituições de ensino, a aplicação de BPM ainda é pouco difundida~\cite{samia2010}. Qualquer que seja a área, os artefatos gerados em estudos de caso dificilmente ficam abertos para estudo aprofundado ou reuso em casos similares.
+Instituições de ensino superior e, mais especificamente, suas subunidades que gerenciam cursos de graduação, são potenciais “clientes” de BPM, pois realizam processos envolvendo diferentes atores (discentes, docentes, secretários, coordenadores, etc.). Tais instituições podem se beneficiar com a adoção de ferramentas de apoio à aplicação de BPM, os chamados sistemas de BPM (\emph{Business Process Management Systems} ou \emph{Suites} - BPMS). Casos e exemplos de gestão de processos de negócio são facilmente encontrados na literatura~\cite{JestonNelis2012}, mas geralmente se enquadram no setor empresarial ou de serviços públicos. Em instituições de ensino, a aplicação de BPM ainda é pouco difundida~\cite{samia2010}. Qualquer que seja a área, os artefatos gerados em estudos de caso dificilmente ficam abertos para estudo aprofundado ou reuso em casos similares.
 
 Nesse contexto, surgiu a motivação para a aplicação de BPM a um processo comumente realizado em cursos de graduação e, particularmente, em cursos de bacharelado em Sistemas de Informação.
 O processo escolhido foi a apreciação e validação de Atividades Complementares, que são realizadas pelos alunos com o objetivo de enriquecer e flexibilizar suas formações. Como tais atividades podem ser realizadas externamente à instituição de ensino, o processo geralmente envolve um trâmite de documentos impressos, entre alunos e coordenação, para que as atividades sejam reconhecidas e computadas na integralização curricular. Possíveis melhorias de tal processo seriam, portanto, a redução de impressões de documentos e maior agilidade na tramitação.
 
-Uma vez analisado o processo, escolheu-se um BPMS que atendesse aos requisitos identificados. Neste trabalho, optou-se pelo Bonita Open Solution (BOS), um software de código aberto que apoia atividades de BPM de maneira  prática, visando, principalmente, os responsáveis  por projetos de desenvolvimento e implantação de aplicações orientadas a processo \cite{BONITASOFT}. Utilizando esta ferramenta, desenvolveu-se um sistema visando à transformação e melhoria do processo, possibilitando que toda a tramitação e apreciação de documentos seja realizada via Web pelos envolvidos.
+Uma vez analisado o processo, escolheu-se um BPMS que atendesse aos requisitos identificados. Neste trabalho, optou-se pelo Bonita Open Solution (BOS), um software de código aberto que apoia atividades de BPM visando, principalmente, os responsáveis  por projetos de desenvolvimento e implantação de aplicações orientadas a processo~\cite{BONITASOFT}. Utilizando esta ferramenta, desenvolveu-se um sistema visando à transformação e melhoria do processo, possibilitando que toda a tramitação e apreciação de documentos seja realizada via Web pelos envolvidos.
 
 O presente artigo discute as principais etapas do caso prático desenvolvido. Todos os artefatos produzidos durante o desenvolvimento estão disponíveis em um repositório público e podem, assim, ser reusados ou servir como recurso didático em disciplinas que abordam BPM e tecnologias relacionadas. O sistema desenvolvido passou por vários testes com usuários finais e encontra-se, atualmente, implantado no curso de Sistemas de Informação da Universidade Federal de Santa Maria.
 
 O artigo está estruturado da seguinte forma: a seção 2 apresenta uma fundamentação relacionando conceitos de BPM, ferramentas disponíveis a esse propósito e um detalhamento da ferramenta adotada. A seção 3 aborda a legislação educacional sobre atividades complementares em cursos de graduação, bem como as premissas para sua apreciação e validação junto às instituições de ensino. Além disso, são explorados os requisitos do processo almejado, com base no caso real analisado. A seguir, a seção 4 relata principais fases do desenvolvimento: modelagem e implementação. A seção 5 faz uma avaliação do trabalho realizado e, por fim, a seção 6 traz as considerações finais e perspectivas de trabalhos futuros.
 
 
-\section{Gerenciamento de Processos de Negócio}
+\section{Gestão de Processos de Negócio}
 
 \subsection{Conceitos}
 
-Processos de negócio são atividades cujo objetivo é estabelecer como o trabalho será realizado em uma organização. Pode-se dizer que são ações relacionadas entre si, a fim de promover uma saída \cite{ABPMP}. O gerenciamento (ou gestão) de processos de negócio, comumente designado pela sigla BPM, pode ser definido como um conjunto de boas práticas, com o intuito de mapear e gerenciar processos de negócio, onde se envolvem pessoas e atividades automáticas. O principal objetivo do BPM é obter uma melhoria desse processo~\cite{weske}.
+Processos de negócio são atividades cujo objetivo é estabelecer como o trabalho será realizado em uma organização. Pode-se dizer que são ações relacionadas entre si, a fim de promover uma saída \cite{ABPMP}. A gestão (ou gerenciamento) de processos de negócio, comumente designada pela sigla BPM, pode ser definida como um conjunto de boas práticas, com o intuito de mapear e gerenciar processos de negócio, onde se envolvem pessoas e atividades automáticas. O principal objetivo da BPM é obter uma melhoria desse processo~\cite{weske}.
 
-O ciclo de vida de execução do BPM possui várias fases e dentre elas estão a análise, a modelagem e a implementação de processo de negócio. Durante a fase da análise são reunidas informações pertinentes ao processos organizacionais, com a intenção de entendê-los. Também são descritos os objetivos da modelagem e o ambiente de negócio que será modelado. A fase de modelagem é descrita como \emph{“um conjunto de atividades envolvidas na criação de representações de um processo de negócio”}~\cite{ABPMP}. Por fim, a etapa de implementação é definida como a fase que tem o objetivo de realizar o desenho aprovado do processo de negócio, na forma de procedimentos e fluxos de trabalho \cite{ABPMP}.
+O ciclo de vida de execução de BPM possui várias fases e dentre elas estão a análise, a modelagem e a implementação de processo de negócio. Durante a fase da análise são reunidas informações pertinentes ao processos organizacionais, com a intenção de entendê-los. Também são descritos os objetivos da modelagem e o ambiente de negócio que será modelado. A fase de modelagem é descrita como \emph{“um conjunto de atividades envolvidas na criação de representações de um processo de negócio”}~\cite{ABPMP}. Por fim, a etapa de implementação é definida como a fase que tem o objetivo de realizar o desenho aprovado do processo de negócio, na forma de procedimentos e fluxos de trabalho \cite{ABPMP}.
 
 	No que diz respeito à modelagem, existe um padrão chamado \emph{Business Process Model and Notation} (BPMN), que define  uma série de elementos padrões para facilitar o entendimento e o desenho do processo~\cite{BPMN}. Essa notação engloba termos para atividades, para encarregados de cada tarefa, entre outros. Essa notação é comumente usada por ferramentas BPMS, apresentadas na próxima seção.
 
@@ -196,15 +196,17 @@ Com o sistema em pleno funcionamento, a interface administrativa do BOS, mostrad
 
 \section{Trabalhos Relacionados}
 
-Com o crescente interesse em tecnologias de BPM, é comum encontrar estudos de caso em páginas Web de empresas que comercializam soluções~\footnote{http://www.orbis-software.com/customers/}. Na literatura técnico-científica, muitos autores têm se dedicado a investigar a eficácia das soluções, principalmente no que diz respeito ao uso da notação BPMN para modelagem de processos~\cite{recker2006, muehlen2008, ostroski-sbsi2012}. Estudos envolvendo outras fases e ferramentas de BPM são menos frequentes, embora se reconheça sua importância~\{SORDI2007}.
-De fato, Barn e Oussena (2010) 
+Com o crescente interesse em tecnologias de BPM, é comum encontrar estudos de caso em páginas Web de empresas que comercializam soluções~\footnote{http://www.orbis-software.com/customers/}. Na literatura técnico-científica, muitos autores têm se dedicado a investigar a eficácia das soluções, principalmente no que diz respeito ao uso da notação BPMN para modelagem de processos~\cite{recker2006, muehlen2008, ostroski-sbsi2012}. Estudos envolvendo outras fases e ferramentas de BPM são menos frequentes, embora se reconheça sua importância~\cite{SORDI2007, wohed2009patterns}.
+
+No trabalho de Barn e Oussena (2010), encontra-se um estudo de caso de BPM aplicado a instituições de ensino superior no Reino Unido. O processo estudado, neste caso, tem por objetivo a validação de projetos de cursos superiores, resultando na criação de novos cursos ou na continuidade de cursos existentes. A modelagem do processo é feita com a ferramenta Intalio Designer e os autores relatam desafios enfrentados nesta etapa. Nosso trabalho relaciona-se a este, à medida que explora BPM no contexto de instituições de ensino superior e aborda qualidades e limitações de uma ferramenta. Porém, nosso trabalho abrange mais etapas de BPM, chegando à implantação e avaliação por usuários finais. 
+
+%Sob o ponto de vista
+%Outros trabalhos relacionados referem-se especificamente a avaliações de sistemas de BPM distribuídos como software livre
 
 
-No contexto de instituições de ensino superior
-
-casos: BPM em instituições de ensino superior (um artigo apenas?); 
-avaliações de software livre para BPM (alguns comparativos, mas a maioria não relata experiência com BOS;
-repositórios de (modelos de) processos: uma tese recente sobre isso, com vários repositórios citados. No entanto, em geral, são repositórios de modelos apenas
+%casos: BPM em instituições de ensino superior (um artigo apenas?); 
+%avaliações de software livre para BPM (alguns comparativos, mas a maioria não relata experiência com %BOS;
+%repositórios de (modelos de) processos: uma tese recente sobre isso, com vários repositórios citados. No entanto, em geral, são repositórios de modelos apenas
 
 
 \section{Considerações Finais}
