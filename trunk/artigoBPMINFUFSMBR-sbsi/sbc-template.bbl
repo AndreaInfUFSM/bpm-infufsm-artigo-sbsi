@@ -7,8 +7,8 @@
 \newblock Association of Business Process Management Professionals, 2nd
   edition.
 
-\bibitem[Barn and Oussena 2010]{samia2010}
-Barn, B. and Oussena, S. (2010).
+\bibitem[Barn e Oussena 2010]{samia2010}
+Barn, B. e Oussena, S. (2010).
 \newblock {BPMN}, toolsets, and methodology: a case study of business process
   management in higher education.
 \newblock In {\em Information systems development: towards a service provision
@@ -18,26 +18,63 @@ Barn, B. and Oussena, S. (2010).
 BonitaSoft (2012).
 \newblock Bonitasoft open source workflow and bpm software.
 
+\bibitem[BPMI.org 2006]{BPMN}
+BPMI.org (2006).
+\newblock {OMG}: {Business Process Modeling Notation} specification. {Final
+  Adopted Specification}. {Object Management Group}.
+\newblock Disponível em: http://www.bpmi.org/.
+
 \bibitem[{Conselho Nacional de Educação} 2012]{parecer:136}
 {Conselho Nacional de Educação} (2012).
 \newblock Parecer cne/ces no: 136/2012. conselho nacional de educação/câmara
   de educação superior. diretrizes curriculares nacionais para os cursos de
   graduação em computação. processo nº 23001.000026/2012-95.
 
-\bibitem[INITIATIVE 2013]{BPMN}
-INITIATIVE, B. P.~M. (2013).
-\newblock Business process model and notation (bpmn).
-
-\bibitem[Jeston and Nelis 2012]{JestonNelis2012}
-Jeston, J. and Nelis, J. (2012).
+\bibitem[Jeston e Nelis 2012]{JestonNelis2012}
+Jeston, J. e Nelis, J. (2012).
 \newblock {\em Business Process Management: Practical Guidelines to Successful
   Implementations}.
 \newblock Butterworth-Heinemann, 2nd edition.
+
+\bibitem[Ostroski et~al. 2012]{ostroski-sbsi2012}
+Ostroski, E.~H., Digiampietri, L.~A., Prado, E. P.~V., de~Albuquerque, J.~P.,
+  Frazão, J.~B., Errante, P.~R., e Condino-Neto, A. (2012).
+\newblock Avaliação de {BPMN} para caracterização estratégia de uma
+  organização de pesquisas acadêmicas.
+\newblock In {\em VIII Simpósio Brasileiro de Sistemas de Informação}, pages
+  210--221.
+
+\bibitem[Recker et~al. 2006]{recker2006}
+Recker, J., Indulska, M., Rosemann, M., e Green, P. (2006).
+\newblock How good is {BPMN} really? {Insights} from theory and practice.
+\newblock In {\em Proceedings of the 14th European Conference on Information
+  Systems}.
+
+\bibitem[Sordi e Spelta 2007]{SORDI2007}
+Sordi, J. O.~d. e Spelta, A.~G. (2007).
+\newblock {Análise de componentes da tecnologia de Business Process Management
+  System (BPMS) sob a perspectiva de um caso prático}.
+\newblock {\em {JISTEM - Journal of Information Systems and Technology
+  Management}}, 4:71 -- 94.
 
 \bibitem[Weske 2012]{weske}
 Weske, M. (2012).
 \newblock {\em Business Process Management: Concepts, Languages,
   Architectures}.
 \newblock Springer, 2nd edition.
+
+\bibitem[Wohed et~al. 2009]{wohed2009patterns}
+Wohed, P., Russell, N., Ter~Hofstede, A., Andersson, B., e Van Der~Aalst, W.
+  (2009).
+\newblock Patterns-based evaluation of open source {BPM} systems: The cases of
+  {jBPM}, {OpenWFE}, and {Enhydra Shark}.
+\newblock {\em Information and Software Technology}, 51(8):1187--1216.
+
+\bibitem[zur Muehlen e Recker 2008]{muehlen2008}
+zur Muehlen, M. e Recker, J.~C. (2008).
+\newblock How much language is enough? {Theoretical} and practical use of the
+  {Business Process Modeling Notation}.
+\newblock In {\em Proceedings of the 20th International Conference on Advanced
+  Information Systems Engineering}.
 
 \end{thebibliography}
