@@ -6,9 +6,10 @@ I was expecting a `,' or a `}'---line 81 of file sbc-template.bib
  : @incollection{ something 
  :                          unique,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "likert"
 You've used 12 entries,
             1935 wiz_defined-function locations,
-            537 strings with 6114 characters,
+            538 strings with 6120 characters,
 and the built_in function-call counts, 4462 in all, are:
 = -- 435
 > -- 176
