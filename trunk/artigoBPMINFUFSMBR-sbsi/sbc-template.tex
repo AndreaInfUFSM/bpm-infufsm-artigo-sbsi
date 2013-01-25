@@ -175,11 +175,41 @@ Ao longo do desenvolvimento, foi criado um repositório on-line, disponível em 
 % Retirei a frase abaixo durante a revisão, pois acabou ficando desconectada e um pouco técnica demais (Andrea):
 % Nesta etapa, foi necessário a criação de scripts para início automático dos serviços (Alfresco, Tomcat, BOS, Banco de Dados), que não são fornecidos junto com o software.
 
-\section{Avaliação}
+\section{Implantação e Avaliação}
 
-Após a implementação foi iniciada a fase de testes com usuários finais (membros do colegiado e alguns alunos). Os testes realizados ao longo do desenvolvimento indicaram aceitação por parte dos usuários e revelaram oportunidades de melhoria da interface e da modelagem do processo. Após várias revisões, teve início a fase de implantação do processo, permitindo avaliá-lo em relação aos objetivos iniciais.
+Após a implementação foi iniciada a fase de testes com usuários finais (membros do colegiado e alguns alunos bolsistas). Os testes realizados ao longo do desenvolvimento indicaram aceitação por parte dos usuários e revelaram oportunidades de melhoria da interface e da modelagem do processo. Após várias revisões, teve início a fase de implantação do processo, permitindo avaliá-lo em relação aos objetivos iniciais.
 
-O processo foi disponibilizado à comunidade do curso, envolvendo cerca de 120 alunos e 25 professores. Logo no primeiro mês, o sistema registrou mais de 100 instâncias (casos abertos) do processo. Em consultas informais aos usuários, notou-se forte aceitação da abordagem utilizada, que evita trâmite de documentos em papel. A experiência com BOS no caso em questão foi apresentada a alunos de uma disciplina sobre modelagem de processos de negócio, suscitando interesse e reconhecimento. Entende-se, portanto, que todos os objetivos foram atingidos.
+O processo foi disponibilizado à comunidade do curso, composta por cerca de 120 alunos e 25 professores. O colegiado do curso, seguindo normas internas, fixou uma data limite para registro de atividades já realizadas pelos alunos. Logo no primeiro mês, o sistema registrou mais de 100 instâncias (casos abertos) do processo. Em consultas informais aos usuários, logo no início da implantação, notou-se boa aceitação da abordagem utilizada, que evita trâmite de documentos em papel. 
+
+No segundo mês de uso do sistema, buscou-se quantificar a aceitação do sistema junto aos alunos, que formam o maior número de usuários. Para isso, elaborou-se um questionário com questões de múltipla escolha, cujas opções eram baseadas na escala de Likert~\cite{likert}. Além de questões sobre aceitação, o questionário tinha também outras questões relacionadas a prioridades na implementação de correções e melhorias. Ao todo, 29 alunos responderam ao questionário, que era anônimo e foi enviado aos alunos por e-mail. A tabela \ref{t:aceitacao} resume os resultados obtidos para as questões sobre aceitação do sistema.
+
+\begin{table}
+    \caption{Resultados do questionário de aceitação}\label{t:aceitacao}
+    \begin{tabular}{l|l|l|l}
+        \hline
+Questão  & Concordo  & Indiferente & Discordo \\
+         & totalmente     &             &  totalmente \\ 
+         & ou parcialmente     &             &  ou parcialmente \\ 
+\hline
+O trâmite online é melhor do que & 15 & 2 & 12 \\ 
+o trâmite em papel. & & &\\
+\hline
+O sistema das ACGs é um bom exemplo de & 22   & 2  & 5 \\  
+TI aplicada a um problema real. & & &\\
+\hline
+ A integração do sistema com a base de  & 24 & 3  & 2      \\ 
+usuários existente é conveniente. & & &\\
+\hline
+ O sistema online das ACGs é fácil &  11 & 4  & 14                  \\
+de aprender a usar.   &  & &\\
+        \hline
+    \end{tabular}
+\end{table}
+
+A experiência com BOS no caso em questão foi apresentada a alunos de uma disciplina sobre modelagem de processos de negócio, suscitando interesse e reconhecimento. 
+
+
+Entende-se, portanto, que todos os objetivos foram atingidos.
 
 Mesmo com uma avaliação positiva, a implantação revelou alguns problemas. O principal deles diz respeito a casos que falham, por exemplo devido a problemas de comunicação com o gerenciador de documentos (Alfresco) ou com o banco de dados. Na implementação atual, os casos falhos são simplesmente assinalados aos usuários, sem uma explicação para isso. A identificação do motivo da falha só é possível pela análise de \emph{logs} do BOS, sendo muitas vezes difícil de localizar. É possível alterar a modelagem para incluir caminhos alternativos em caso de falhas, mas isso torna o processo mais complexo e não resolve todos os tipos de problemas (por exemplo, \emph{bugs} no processo). Tudo isso revela a importância de se realizar muitos testes com o processo. Testes automatizados, no entanto, não são suportados pela ferramenta. Independentemente disso, é importante utilizar alguma ferramenta externa para gerenciamento de defeitos e mudanças. No caso em questão, utiliza-se o \emph{issue tracker} disponível no repositório do projeto, em http://code.google.com/p/bpm-infufsm/issues.
 
@@ -222,3 +252,8 @@ Como trabalhos futuros, pretende-se dar continuidade na exploração de BPM e su
 \bibliography{sbc-template}
 
 \end{document}
+
+
+
+
+
