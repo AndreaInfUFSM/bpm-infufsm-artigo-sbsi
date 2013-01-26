@@ -17,9 +17,10 @@ Barn, B. e Oussena, S. (2010).
 \bibitem[BonitaSoft 2012]{BONITASOFT}
 BonitaSoft (2012).
 \newblock Bonitasoft open source workflow and bpm software.
+\newblock Disponível em: http://www.bonitasoft.com.
 
-\bibitem[BPMI.org 2006]{BPMN}
-BPMI.org (2006).
+\bibitem[BPMI 2006]{BPMN}
+BPMI (2006).
 \newblock {OMG}: {Business Process Modeling Notation} specification. {Final
   Adopted Specification}. {Object Management Group}.
 \newblock Disponível em: http://www.bpmi.org/.
